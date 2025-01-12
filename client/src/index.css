@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-cover bg-center bg-fixed transition-colors;
+}
 
-body{
+body.light {
+  @apply bg-light-bg;
+}
+
+body.dark {
+  @apply bg-dark-bg;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #4B5563;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #1A202C;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #2D3748;
 }
