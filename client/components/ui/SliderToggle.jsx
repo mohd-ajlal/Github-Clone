@@ -21,12 +21,12 @@ const SliderToggle = ({ selected, setSelected }) => {
         {selected === "light" ? (
           <>
             <FiMoon className="relative z-10 text-lg md:text-sm" />
-            <span className="relative z-10">Dark</span>
+            {/* <span className="relative z-10">Dark</span> */}
           </>
         ) : (
           <>
             <FiSun className="relative z-10 text-lg md:text-sm" />
-            <span className="relative z-10">Light</span>
+            {/* <span className="relative z-10">Light</span> */}
           </>
         )}
       </button>

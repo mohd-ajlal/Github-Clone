@@ -6,6 +6,8 @@ import { PlaceholdersAndVanishInput } from "../components/ui/placeholders-and-va
 import { cn } from "@/lib/utils";
 import Navbar from '@/components/Navbar';
 import { GithubNav } from '@/components/GithubNav';
+import { motion } from "framer-motion";
+import { LampContainer } from "../components/ui/lamp";
  
 
 export default function Home() {
@@ -45,11 +47,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar className="top-2" />
-      <div className="fixed top-4 right-4">
-      <SliderToggle selected={selected} setSelected={setSelected} />
-
-      </div>
+      <Navbar className="top-2"/>
       <div className="h-[40rem] flex flex-col justify-center items-center px-4">
         <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
           Github Profile
