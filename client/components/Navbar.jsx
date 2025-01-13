@@ -17,10 +17,6 @@ function Navbar({ className }) {
         <MenuItem setActive={setActive} active={active} item="About">
         </MenuItem>
 
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-        </MenuItem>
-
-
         <MenuItem setActive={setActive} active={active} item="Sign In">
         </MenuItem>
       </Menu>
