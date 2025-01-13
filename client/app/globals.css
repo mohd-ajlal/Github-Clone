@@ -4,11 +4,11 @@
 
 @layer base {
   .bg-light-bg {
-    background-color: #ffffff; /* or any light background color you prefer */
+    background-color: #ffffff; 
   }
 
   .bg-dark-bg {
-    background-color: #000000; /* or any dark background color you prefer */
+    background-color: #000000; 
   }
 }
 
