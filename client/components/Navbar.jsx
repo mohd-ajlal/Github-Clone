@@ -8,7 +8,6 @@ import Link from "next/link";
 
 
 function Navbar({ className }) {
-    // const route = useRouter();
 
   const [active, setActive] = useState(null);
     const [selected, setSelected] = useState("light");
