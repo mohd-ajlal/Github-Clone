@@ -60,8 +60,8 @@ import Navbar from '@/components/Navbar';
 export default function Home() {
   const [selected, setSelected] = useState("light");
   const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
+    "Github Rep",
+    "Github username",
     "Where is Andrew Laeddis Hiding?",
     "Write a Javascript method to reverse a string",
     "How to assemble your own PC?",
@@ -102,7 +102,7 @@ export default function Home() {
       </div>
       <div className="h-[40rem] flex flex-col justify-center items-center px-4">
         <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
-          Ask Aceternity UI Anything
+          Github Profile
         </h2>
         <PlaceholdersAndVanishInput
           placeholders={placeholders}
