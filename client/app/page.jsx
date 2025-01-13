@@ -1,13 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import SliderToggle from "@/components/ui/SliderToggle";
 import { PlaceholdersAndVanishInput } from "../components/ui/placeholders-and-vanish-input";
-import { cn } from "@/lib/utils";
 import Navbar from '@/components/Navbar';
 import { GithubNav } from '@/components/GithubNav';
-import { motion } from "framer-motion";
-import { LampContainer } from "../components/ui/lamp";
  
 
 export default function Home() {
