@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { PlaceholdersAndVanishInput } from "../components/ui/placeholders-and-vanish-input";
 import Navbar from '@/components/Navbar';
 import { GithubNav } from '@/components/GithubNav';
+import { WorldMapDemo } from '@/components/WorldMapD';
  
 
 export default function Home() {
@@ -53,13 +54,20 @@ export default function Home() {
           onChange={handleChange}
           onSubmit={onSubmit}
           />
-          <div className='m-5'></div>
-      </div>
-      
-
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2">
+          {/* <div className='m-5'>
         <GithubNav />
+
+          </div> */}
       </div>
+
+      <GithubNav />
+
+      
+      <div className="ml-[100vh] transform -translate-x-1/2">
+
+        {/* <GithubNav /> */}
+      </div>
+ 
     </>
   );
 }

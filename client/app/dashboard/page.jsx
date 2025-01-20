@@ -11,13 +11,25 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import SliderToggle from '@/components/ui/SliderToggle'
-import React, { useEffect, useState } from 'react'
+import SliderToggle from '@/components/ui/SliderToggle';
+import React, { useEffect, useState } from 'react';
 
 const Page = () => {
   const [selected, setSelected] = useState("light");
   const [open, setOpen] = useState(false);
-  
+
+  const handleLogout = async () => {
+    try {
+      await fetch('http://localhost:5000/api/auth/logout', {
+        method: 'GET',
+        credentials: 'include',
+      });
+      window.location.href = '/login';
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
+
   const links = [
     {
       label: "Dashboard",
@@ -36,8 +48,9 @@ const Page = () => {
     },
     {
       label: "Logout",
-      href: "/",
+      href: "#",
       icon: <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />,
+      onClick: handleLogout,
     },
   ];
 
@@ -60,18 +73,17 @@ const Page = () => {
 
   return (
     <>
-
       <div
         className={cn(
-            "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1 max-w-7xl mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden mt-10",
-            "h-[60vh]"
-        )} 
+          "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1 max-w-7xl mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden mt-10",
+          "h-[60vh]"
+        )}
       >
         <Sidebar open={open} setOpen={setOpen}>
           <SidebarBody className="justify-between gap-10">
-          <div className="flex flex-col justify-center items-center px-4 mt-5">
-        <SliderToggle selected={selected} setSelected={setSelected} />
-          </div>
+            <div className="flex flex-col justify-center items-center px-4 mt-5">
+              <SliderToggle selected={selected} setSelected={setSelected} />
+            </div>
             <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
               {open ? <Logo /> : <LogoIcon />}
               <div className="mt-8 flex flex-col gap-2">
