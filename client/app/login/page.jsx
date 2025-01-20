@@ -1,27 +1,34 @@
-"use client"
+"use client";
 
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
 const LoginPage = () => {
     return (
-        <div className='flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0'>
-            <div className='w-full bg-glass rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0'>
-                <div className='p-6 space-y-4 md:space-y-6 sm:p-8'>
-                    <h1 className='text-xl font-bold  md:text-2xl text-center'>Login to your account</h1>
+        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden max-w-sm w-full">
+                <div className="p-8 space-y-6">
+                    <h1 className="text-3xl font-extrabold text-center text-gray-800">
+                        Welcome Back!
+                    </h1>
+                    <p className="text-center text-gray-600">
+                        Login to continue exploring our platform.
+                    </p>
+
                     <button
-                        type='button'
-                        className='text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 
-                        focus:outline-none focus:ring-[#24292F]/50 
-              font-medium rounded-lg flex gap-2 p-2 items-center w-full text-center justify-center'
-                        onClick={() => window.location.href = 'http://localhost:5000/api/auth/github'}
+                        type="button"
+                        className="w-full flex items-center justify-center gap-3 bg-black text-white hover:bg-gray-900 focus:ring-4 focus:ring-gray-700 rounded-lg py-3 transition-all duration-300 ease-in-out shadow-md"
+                        onClick={() => (window.location.href = "http://localhost:5000/api/auth/github")}
                     >
-                        <FaGithub className='w-5 h-5' />
-                        Login with Github
+                        <FaGithub className="w-6 h-6" />
+                        <span className="text-lg font-medium">Login with GitHub</span>
                     </button>
-                    <p className='text-sm font-light text-gray-500'>
-                        {"Don't"} have an account?{" "}
-                        <Link href='/signup' className='font-medium text-primary-600 hover:underline text-blue-600'>
+
+                    <p className="text-center text-sm text-gray-500">
+                        Don&apos;t have an account?{' '}
+                        <Link
+                            href="/signup"
+                            className="text-blue-600 hover:underline font-medium">
                             Sign Up
                         </Link>
                     </p>
@@ -30,4 +37,5 @@ const LoginPage = () => {
         </div>
     );
 };
-export default LoginPage;   
+
+export default LoginPage;
