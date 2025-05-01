@@ -7,7 +7,6 @@ import Image from "next/image"
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Hero Section */}
       <section className="py-12 md:py-24 lg:py-32 flex flex-col items-center text-center">
         <div className="container px-4 md:px-6">
           <div className="space-y-4 md:space-y-6">
@@ -34,7 +33,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-12 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -47,7 +45,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Search across millions of repositories and users to find exactly what you're looking for.
+                  Search across millions of repositories and users to find exactly what you&#39;re looking for.
                 </p>
               </CardContent>
             </Card>
@@ -120,7 +118,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trending Section */}
       <section className="py-12 md:py-24">
         <div className="container px-4 md:px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-8">Trending Repositories</h2>

@@ -11,7 +11,6 @@ export default function LoginPage() {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
   const handleSignIn = () => {
-    // Simulate sign-in success (replace with actual logic)
     setIsSignedIn(true);
   };
 

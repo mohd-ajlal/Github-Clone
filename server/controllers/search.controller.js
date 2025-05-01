@@ -1,5 +1,3 @@
-// controllers/search.controller.js
-
 import dotenv from 'dotenv';
 dotenv.config();
 
